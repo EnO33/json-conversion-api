@@ -14,23 +14,25 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How it works
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Pass some data to the API using a POST request like so:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+{
+"data": "The battery life of the phone is 24 hours ans 20 minutes. My name is Matthieu and I'm 25 years old.",
+"format": {
+"name": {"type": "string"},
+"age": {"type": "number"},
+"batteryLifeHrs": {"type": "number"},
+"batteryLifeMns": {"type": "number"}
+}
+}
 
-## Learn More
+The API returns:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+{
+"name": "Matthieu",
+"age": 25,
+"batteryLifeHrs": 24,
+"batteryLifeMns": 20
+}
