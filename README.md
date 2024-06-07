@@ -18,21 +18,25 @@ bun dev
 
 Pass some data to the API using a POST request like so:
 
+```json
 {
-"data": "The battery life of the phone is 24 hours ans 20 minutes. My name is Matthieu and I'm 25 years old.",
-"format": {
-"name": {"type": "string"},
-"age": {"type": "number"},
-"batteryLifeHrs": {"type": "number"},
-"batteryLifeMns": {"type": "number"}
+  "data": "The battery life of the phone is 24 hours ans 20 minutes. My name is Matthieu and I'm 25 years old.",
+  "format": {
+    "name": { "type": "string" },
+    "age": { "type": "number" },
+    "batteryLifeHrs": { "type": "number" },
+    "batteryLifeMns": { "type": "number" }
+  }
 }
-}
+```
 
 The API returns:
 
+```json
 {
-"name": "Matthieu",
-"age": 25,
-"batteryLifeHrs": 24,
-"batteryLifeMns": 20
+  "name": "Matthieu",
+  "age": 25,
+  "batteryLifeHrs": 24,
+  "batteryLifeMns": 20
 }
+```
