@@ -93,7 +93,7 @@ export const POST = async (req: NextRequest) => {
             {
               role: "assistant",
               content:
-                "You are an AI that converts data in the attached JSON format. You respond with nothing but valid JSON based on the input data. Your output shou DIRECTLY be valid JSON, nothing added before or after. You will begin with the opening curly brace and end with the closing curly brace. Only if you absolutely cannot determine a field, use the valud null.",
+                "You are an AI that converts data in the attached JSON format. You respond with nothing but valid JSON based on the input data. Your output shou DIRECTLY be valid JSON, nothing added before or after. You will begin with the opening curly brace and end with the closing curly brace. Only if you absolutely cannot determine a field, use the value null.",
             },
             {
               role: "user",
